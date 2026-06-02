@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Избранное | Nuvole Bianche</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@500;600&family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body data-page="favorites">
+        <header class="header">
+            <div class="container header__inner">
+                <a class="logo" href="index.html" aria-label="Nuvole Bianche">
+                    <img
+                        src="assets/svg_assets/img_logo_for_navbar.png"
+                        alt=""
+                    />
+                    <span>Nuvole Bianche</span>
+                </a>
+
+                <button
+                    class="burger"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M5 12H20"
+                            stroke="#000000"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        ></path>
+                        <path
+                            d="M5 17H20"
+                            stroke="#000000"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        ></path>
+                        <path
+                            d="M5 7H20"
+                            stroke="#000000"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        ></path>
+                    </svg>
+                </button>
+
+                <nav class="nav" aria-label="Основная навигация">
+                    <a class="nav__link" href="index.html" data-nav="home"
+                        >Главная</a
+                    >
+                    <a class="nav__link" href="catalog.html" data-nav="catalog"
+                        >Каталог</a
+                    >
+                    <a
+                        class="nav__link"
+                        href="favorites.html"
+                        data-nav="favorites"
+                        >Избранное</a
+                    >
+                    <a
+                        class="nav__mail"
+                        href="mailto:example@gmail.com"
+                        aria-label="Написать на почту"
+                    >
+                        <img
+                            src="assets/svg_assets/svg_mail.svg"
+                            alt=""
+                        />
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page-main">
+            <div class="title-bar">
+                <div class="container">
+                    <h1>Избранное</h1>
+                </div>
+            </div>
+
+            <section class="container catalog-section">
+                <div class="products" data-products="favorites"></div>
+                <div class="empty-favorites" hidden>
+                    <p>В избранном пока нет товаров.</p>
+                    <a class="button-link" href="catalog.html"
+                        >Перейти в каталог</a
+                    >
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__inner">
+                <a
+                    class="logo logo--footer"
+                    href="index.html"
+                    aria-label="Nuvole Bianche"
+                >
+                    <img
+                        src="assets/svg_assets/img_logo_for_footer.png"
+                        alt=""
+                    />
+                    <span>Nuvole Bianche</span>
+                </a>
+                <div class="footer__column">
+                    <strong>Соц. сети</strong>
+                    <a class="social-link" href="#">
+                        <svg
+                            width="21"
+                            height="21"
+                            viewBox="0 0 21 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M14.5174 6.58895C14.5213 6.58895 14.5266 6.58895 14.5318 6.58895C14.669 6.58895 14.7963 6.6316 14.9007 6.7051L14.8987 6.70379C14.9748 6.77007 15.026 6.86326 15.0385 6.96826V6.97023C15.0516 7.05029 15.0588 7.14216 15.0588 7.23601C15.0588 7.27866 15.0575 7.32066 15.0542 7.36266V7.35676C14.9066 8.91141 14.2661 12.6816 13.9406 14.4219C13.8027 15.1589 13.5317 15.4057 13.2692 15.4293C12.6989 15.4824 12.2658 15.0526 11.7133 14.6904C10.8483 14.1227 10.3594 13.7696 9.52006 13.2164C8.54947 12.5779 9.17881 12.2255 9.73138 11.6519C9.87641 11.501 12.3905 9.21395 12.4397 9.00657C12.4423 8.9941 12.4437 8.98032 12.4437 8.96588C12.4437 8.9147 12.4246 8.8681 12.3938 8.83266C12.3597 8.81035 12.317 8.79788 12.2724 8.79788C12.2428 8.79788 12.2146 8.80379 12.1884 8.81363L12.1897 8.81298C12.1031 8.83266 10.7214 9.74573 8.04481 11.5522C7.75278 11.7825 7.38397 11.9282 6.98234 11.9453H6.97841C6.40944 11.8764 5.89297 11.7497 5.40275 11.5692L5.45131 11.585C4.83575 11.3842 4.34684 11.2785 4.38884 10.9386C4.41116 10.7618 4.65484 10.5809 5.11991 10.3959C7.98466 9.14766 9.895 8.32495 10.8509 7.9277C11.9055 7.36791 13.1281 6.90723 14.4137 6.60863L14.5167 6.58829L14.5174 6.58895ZM10.4539 0.672852C5.00572 0.685977 0.59375 5.10582 0.59375 10.556C0.59375 16.014 5.01819 20.4391 10.4769 20.4391C15.9356 20.4391 20.36 16.0147 20.36 10.556C20.36 5.10582 15.948 0.685977 10.5012 0.672852H10.4998C10.4845 0.672852 10.4692 0.672852 10.4539 0.672852Z"
+                                fill="#3F3D3E"
+                            />
+                        </svg>
+                        <span>Telegram</span>
+                    </a>
+                    <a class="social-link" href="#">
+                        <svg
+                            width="21"
+                            height="21"
+                            viewBox="0 0 21 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M16.5493 14.7016H15.1193C14.5779 14.7016 14.4106 14.2711 13.438 13.2854C12.5908 12.4651 12.2161 12.3549 12.008 12.3549C11.716 12.3549 11.6327 12.4382 11.6327 12.8411V14.1326C11.6327 14.4805 11.5218 14.6885 10.605 14.6885C8.75566 14.5645 7.16622 13.5558 6.24353 12.0858L6.22975 12.0628C5.15875 10.7326 4.36928 9.1294 3.97881 7.3759L3.96438 7.29912C3.96438 7.09109 4.04772 6.89618 4.45066 6.89618H5.88062C6.24156 6.89618 6.38069 7.06287 6.52047 7.45137C7.22791 9.49362 8.40916 11.2852 8.89544 11.2852C9.07591 11.2852 9.15925 11.2018 9.15925 10.7438V8.63131C9.10347 7.65874 8.58963 7.57606 8.58963 7.2289C8.59553 7.04318 8.74778 6.89487 8.93416 6.89487C8.94006 6.89487 8.94531 6.89487 8.95122 6.89552H8.95056H11.2008C11.5067 6.89552 11.6176 7.06221 11.6176 7.42315V10.2713C11.6176 10.5764 11.7567 10.688 11.84 10.688C12.0205 10.688 12.1741 10.5764 12.5068 10.2437C13.1985 9.39912 13.7898 8.43312 14.2406 7.39165L14.2708 7.3129C14.3659 7.07468 14.5943 6.9093 14.8614 6.9093C14.8739 6.9093 14.8857 6.90996 14.8982 6.91062H14.8962H16.3262C16.7567 6.91062 16.8544 7.13177 16.7567 7.43824C16.1831 8.70152 15.5387 9.78696 14.7918 10.7923L14.826 10.7438C14.6737 10.9938 14.6179 11.1047 14.826 11.3836C14.9782 11.5916 15.4789 12.0221 15.8123 12.4113C16.2947 12.8884 16.6989 13.4436 17.0041 14.0565L17.0205 14.0926C17.1596 14.4942 16.9509 14.7029 16.548 14.7029L16.5493 14.7016ZM13.522 0.65918H7.47991C1.96544 0.65918 0.660156 1.96446 0.660156 7.47893V13.521C0.660156 19.0355 1.96544 20.3408 7.47991 20.3408H13.522C19.0365 20.3408 20.3418 19.0355 20.3418 13.521V7.47893C20.3418 1.96446 19.022 0.65918 13.522 0.65918Z"
+                                fill="#3F3D3E"
+                            />
+                        </svg>
+                        <span>Vk</span>
+                    </a>
+                </div>
+                <div class="footer__column">
+                    <strong>Контакты</strong>
+                    <a href="mailto:example@gmail.com">alenarabinina110@gmail.com</a>
+                    <a href="tel:+79110310977">+7 (911) 031-09-77</a>
+                </div>
+                <a class="footer__question" href="mailto:example@gmail.com">
+                    <span>Задать вопрос</span>
+                    <svg
+                        width="70"
+                        height="70"
+                        viewBox="0 0 70 70"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M35 1.5C53.5015 1.5 68.5 16.4985 68.5 35C68.5 53.5015 53.5015 68.5 35 68.5C16.4985 68.5 1.5 53.5015 1.5 35C1.5 16.4985 16.4985 1.5 35 1.5Z"
+                            fill="#D4D5D0"
+                            stroke="#2B2E35"
+                            stroke-width="3"
+                        />
+                        <path
+                            d="M20 29C20 27.2498 20 26.3748 20.3633 25.7063C20.6829 25.1183 21.1928 24.6402 21.82 24.3406C22.5331 24 23.4665 24 25.3333 24H44.6667C46.5335 24 47.467 24 48.18 24.3406C48.8072 24.6402 49.3172 25.1183 49.6367 25.7063C50 26.3748 50 27.2498 50 29V49L44.4595 46.4028C44.0395 46.2059 43.8295 46.1075 43.6093 46.0381C43.414 45.9766 43.2128 45.932 43.0087 45.9052C42.7787 45.875 42.5438 45.875 42.0743 45.875H25.3333C23.4665 45.875 22.5331 45.875 21.82 45.5344C21.1928 45.2348 20.6829 44.7567 20.3633 44.1688C20 43.5003 20 42.6252 20 40.875V29Z"
+                            stroke="#2B2E35"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
